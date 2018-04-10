@@ -1,0 +1,28 @@
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\bin\AJSGame.dll
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\bin\AJSGame.pdb
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.csprojResolveAssemblyReference.cache
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.dll
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.pdb
+D:\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\bin\AJSGame.dll
+D:\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\bin\AJSGame.pdb
+D:\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.dll
+D:\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.pdb
+D:\Backups\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\bin\AJSGame.dll
+D:\Backups\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\bin\AJSGame.pdb
+D:\Backups\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.csprojResolveAssemblyReference.cache
+D:\Backups\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.dll
+D:\Backups\Visual Studio 2012 BACKUP\Projects\AJSGame\AJSGame\obj\Debug\AJSGame.pdb
+D:\Web\MMO\2013-01-26\AJSGame\bin\AJSGame.dll.config
+D:\Web\MMO\2013-01-26\AJSGame\bin\AJSGame.dll
+D:\Web\MMO\2013-01-26\AJSGame\bin\AJSGame.pdb
+D:\Web\MMO\2013-01-26\AJSGame\obj\Debug\AJSGame.csprojResolveAssemblyReference.cache
+D:\Web\MMO\2013-01-26\AJSGame\obj\Debug\AJSGame.dll
+D:\Web\MMO\2013-01-26\AJSGame\obj\Debug\AJSGame.pdb
+C:\Users\jcsawyer\Desktop\2013-01-26\AJSGame\bin\AJSGame.dll.config
+C:\Users\jcsawyer\Desktop\2013-01-26\AJSGame\bin\AJSGame.dll
+C:\Users\jcsawyer\Desktop\2013-01-26\AJSGame\bin\AJSGame.pdb
+C:\Users\jcsawyer\Desktop\2013-01-26\AJSGame\obj\Debug\AJSGame.csprojResolveAssemblyReference.cache
+C:\Users\jcsawyer\Desktop\2013-01-26\AJSGame\obj\Debug\AJSGame.csproj.CoreCompileInputs.cache
+C:\Users\jcsawyer\Desktop\2013-01-26\AJSGame\obj\Debug\AJSGame.dll
+C:\Users\jcsawyer\Desktop\2013-01-26\AJSGame\obj\Debug\AJSGame.pdb

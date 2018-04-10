@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6274A55-5A10-41D5-B6CA-709F42F0C30D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AJSGame</RootNamespace>
+    <AssemblyName>AJSGame</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="AJSGameConnectionString-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28LocalDB%29\v11.0%3bAttachDbFilename=C:\Users\josep_000\Documents\visual studio 2012\Projects\AJSGame\AJSGame\App_Data\AJSGame.mdf%3bIntegrated Security=True" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\AJSGameConnectionString-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alliance.aspx" />
+    <Content Include="App_Data\AJSGame.mdf" />
+    <Content Include="App_Data\AJSGame_log.ldf">
+      <DependentUpon>AJSGame.mdf</DependentUpon>
+    </Content>
+    <Content Include="building.aspx" />
+    <Content Include="Controls\Academy.ascx" />
+    <Content Include="Controls\Alliance.ascx" />
+    <Content Include="Controls\Barracks.ascx" />
+    <Content Include="Controls\Claypit.ascx" />
+    <Content Include="Controls\Compose.ascx" />
+    <Content Include="Controls\EditAlliance.ascx" />
+    <Content Include="Controls\Farm.ascx" />
+    <Content Include="Controls\Granary.ascx" />
+    <Content Include="Controls\Inbox.ascx" />
+    <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\Main.ascx" />
+    <Content Include="Controls\Mine.ascx" />
+    <Content Include="Controls\NewAlliance.ascx" />
+    <Content Include="Controls\Outbox.ascx" />
+    <Content Include="Controls\RallyPoint.ascx" />
+    <Content Include="Controls\Shelter.ascx" />
+    <Content Include="Controls\Stable.ascx" />
+    <Content Include="Controls\Timbercamp.ascx" />
+    <Content Include="Controls\Wall.ascx" />
+    <Content Include="Controls\Warehouse.ascx" />
+    <Content Include="Controls\Workshop.ascx" />
+    <Content Include="default.aspx" />
+    <Content Include="Images\Resources\Clay.gif" />
+    <Content Include="Images\Resources\Food.gif" />
+    <Content Include="Images\Resources\Metal.gif" />
+    <Content Include="Images\Resources\Time.gif" />
+    <Content Include="Images\Resources\Warehouse.gif" />
+    <Content Include="Images\Resources\Wood.gif" />
+    <Content Include="mail.aspx" />
+    <Content Include="overview.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="Styles\Game.css" />
+    <Content Include="topalliances.aspx" />
+    <Content Include="topusers.aspx" />
+    <Content Include="viewalliance.aspx" />
+    <Content Include="viewuser.aspx" />
+    <Content Include="viewvillage.aspx" />
+    <Content Include="village.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alliance.aspx.cs">
+      <DependentUpon>alliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alliance.aspx.designer.cs">
+      <DependentUpon>alliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="building.aspx.cs">
+      <DependentUpon>building.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="building.aspx.designer.cs">
+      <DependentUpon>building.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Core\ControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code\Core\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code\Objects\Alliance.cs" />
+    <Compile Include="Code\Objects\Construction.cs" />
+    <Compile Include="Code\Objects\Invite.cs" />
+    <Compile Include="Code\Objects\Message.cs" />
+    <Compile Include="Code\Objects\Movement.cs" />
+    <Compile Include="Code\Objects\Report.cs" />
+    <Compile Include="Code\Objects\Session.cs" />
+    <Compile Include="Code\Objects\Training.cs" />
+    <Compile Include="Code\Objects\Unit.cs" />
+    <Compile Include="Controls\Academy.ascx.cs">
+      <DependentUpon>Academy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Academy.ascx.designer.cs">
+      <DependentUpon>Academy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Alliance.ascx.cs">
+      <DependentUpon>Alliance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Alliance.ascx.designer.cs">
+      <DependentUpon>Alliance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Barracks.ascx.cs">
+      <DependentUpon>Barracks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Barracks.ascx.designer.cs">
+      <DependentUpon>Barracks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Claypit.ascx.cs">
+      <DependentUpon>Claypit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Claypit.ascx.designer.cs">
+      <DependentUpon>Claypit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Compose.ascx.cs">
+      <DependentUpon>Compose.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Compose.ascx.designer.cs">
+      <DependentUpon>Compose.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditAlliance.ascx.cs">
+      <DependentUpon>EditAlliance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditAlliance.ascx.designer.cs">
+      <DependentUpon>EditAlliance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Farm.ascx.cs">
+      <DependentUpon>Farm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Farm.ascx.designer.cs">
+      <DependentUpon>Farm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Granary.ascx.cs">
+      <DependentUpon>Granary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Granary.ascx.designer.cs">
+      <DependentUpon>Granary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Inbox.ascx.cs">
+      <DependentUpon>Inbox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Inbox.ascx.designer.cs">
+      <DependentUpon>Inbox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Main.ascx.cs">
+      <DependentUpon>Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Main.ascx.designer.cs">
+      <DependentUpon>Main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Mine.ascx.cs">
+      <DependentUpon>Mine.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Mine.ascx.designer.cs">
+      <DependentUpon>Mine.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewAlliance.ascx.cs">
+      <DependentUpon>NewAlliance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NewAlliance.ascx.designer.cs">
+      <DependentUpon>NewAlliance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Outbox.ascx.cs">
+      <DependentUpon>Outbox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Outbox.ascx.designer.cs">
+      <DependentUpon>Outbox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RallyPoint.ascx.cs">
+      <DependentUpon>RallyPoint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RallyPoint.ascx.designer.cs">
+      <DependentUpon>RallyPoint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shelter.ascx.cs">
+      <DependentUpon>Shelter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Shelter.ascx.designer.cs">
+      <DependentUpon>Shelter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Stable.ascx.cs">
+      <DependentUpon>Stable.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Stable.ascx.designer.cs">
+      <DependentUpon>Stable.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Timbercamp.ascx.cs">
+      <DependentUpon>Timbercamp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Timbercamp.ascx.designer.cs">
+      <DependentUpon>Timbercamp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Wall.ascx.cs">
+      <DependentUpon>Wall.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Wall.ascx.designer.cs">
+      <DependentUpon>Wall.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Warehouse.ascx.cs">
+      <DependentUpon>Warehouse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Warehouse.ascx.designer.cs">
+      <DependentUpon>Warehouse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Workshop.ascx.cs">
+      <DependentUpon>Workshop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Workshop.ascx.designer.cs">
+      <DependentUpon>Workshop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="mail.aspx.cs">
+      <DependentUpon>mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mail.aspx.designer.cs">
+      <DependentUpon>mail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="overview.aspx.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="overview.aspx.designer.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Core\Functions.cs" />
+    <Compile Include="Code\Objects\Village.cs" />
+    <Compile Include="Code\Objects\VillageUnits.cs" />
+    <Compile Include="Code\Objects\VillageBuildings.cs" />
+    <Compile Include="Code\Objects\VillageResearch.cs" />
+    <Compile Include="Code\Objects\Building.cs" />
+    <Compile Include="Code\Game.cs" />
+    <Compile Include="Code\Core\SQL.cs" />
+    <Compile Include="Code\Objects\User.cs" />
+    <Compile Include="Code\Objects\UserProfile.cs" />
+    <Compile Include="Controls\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="topalliances.aspx.cs">
+      <DependentUpon>topalliances.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="topalliances.aspx.designer.cs">
+      <DependentUpon>topalliances.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="topusers.aspx.cs">
+      <DependentUpon>topusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="topusers.aspx.designer.cs">
+      <DependentUpon>topusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewalliance.aspx.cs">
+      <DependentUpon>viewalliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewalliance.aspx.designer.cs">
+      <DependentUpon>viewalliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewuser.aspx.cs">
+      <DependentUpon>viewuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewuser.aspx.designer.cs">
+      <DependentUpon>viewuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewvillage.aspx.cs">
+      <DependentUpon>viewvillage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewvillage.aspx.designer.cs">
+      <DependentUpon>viewvillage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="village.aspx.cs">
+      <DependentUpon>village.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="village.aspx.designer.cs">
+      <DependentUpon>village.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master.Master" />
+    <Content Include="Images\Resources\Clay.psd" />
+    <Content Include="Images\Resources\Food.psd" />
+    <Content Include="Images\Resources\Metal.psd" />
+    <Content Include="Images\Resources\Warehouse.psd" />
+    <Content Include="Images\Resources\Wood.psd" />
+    <None Include="Properties\PublishProfiles\Server.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50327</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62315/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

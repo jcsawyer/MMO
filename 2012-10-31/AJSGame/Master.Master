@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="AJSGame.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Styles/Game.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="AJSForm" runat="server">
+        <div id="wrap">
+            <div id="header">
+                <ul>
+                    <li><a href="default.aspx">Logout</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="topusers.aspx">Users</a></li>
+                    <li><a href="topalliances.aspx">Alliances</a></li>
+                    <li style="width: 200px;"><a href="#"></a></li>
+                    <li><a href="alliance.aspx">Alliance</a></li>
+                    <li><a href="mail.aspx?mode=inbox">Mail (<%= AJSGame.Game.Session.User.UnreadMessages.ToString() %>)</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Buddies</a></li>
+                </ul>
+                <div class="hr"></div>
+                <div style="float: left;">
+                    <ul>
+                        <li><a href="overview.aspx">Overview</a></li>
+                        <li><a href="#">Map</a></li>
+                        <li>
+                            <a href="village.aspx"><%= AJSGame.Game.Session.Village.Name %></a>
+                            (<%= AJSGame.Game.Session.Village.X.ToString() %>|<%= AJSGame.Game.Session.Village.Y.ToString() %>)
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: right; text-align: right;">
+                    <ul>
+                        <li>
+                            <asp:Image ID="WoodImage" AlternateText="Wood" ToolTip="Wood" runat="server" Width="13px" Height="13px" ImageUrl="~/Images/Resources/Wood.gif" /></li>
+                        <li id="wood" title="<%= AJSGame.Game.Session.Village.Buildings.Timbercamp.Attribute.ToString() %>"><%= Math.Floor(AJSGame.Game.Session.Village.Wood).ToString() %></li>
+                        <li>
+                            <asp:Image ID="ClayImage" AlternateText="Clay" ToolTip="Clay" runat="server" Width="13px" Height="13px" ImageUrl="~/Images/Resources/Clay.gif" /></li>
+                        <li id="clay" title="<%= AJSGame.Game.Session.Village.Buildings.Claypit.Attribute.ToString() %>"><%= Math.Floor(AJSGame.Game.Session.Village.Clay).ToString() %></li>
+                        <li>
+                            <asp:Image ID="MetalImage" AlternateText="Metal" ToolTip="Metal" runat="server" Width="13px" Height="13px" ImageUrl="~/Images/Resources/Metal.gif" /></li>
+                        <li id="metal" title="<%= AJSGame.Game.Session.Village.Buildings.Mine.Attribute.ToString() %>"><%= Math.Floor(AJSGame.Game.Session.Village.Metal).ToString() %></li>
+                        <li>
+                            <asp:Image ID="MaxStoreImage" AlternateText="Max" ToolTip="Max Resources" runat="server" Width="13px" Height="13px" ImageUrl="~/Images/Resources/Warehouse.gif" /></li>
+                        <li id="maxstore" title=""><%= AJSGame.Game.Session.Village.MaxStore.ToString() %></li>
+                        <li>
+                            <asp:Image ID="FoodImage" runat="server" AlternateText="Food" ToolTip="Food" Width="13px" Height="13px" ImageUrl="~/Images/Resources/Food.gif" /></li>
+                        <li id="food" title="<%= AJSGame.Game.Session.Village.Buildings.Farm.Attribute.ToString() %>">
+                            <%= Math.Floor(AJSGame.Game.Session.Village.Food).ToString() %>/<%= AJSGame.Game.Session.Village.MaxFood.ToString() %>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="body">
+                <asp:ContentPlaceHolder ID="CPH" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="clear" />
+            </div>
+            <div id="footer">
+                <small>
+                    <%= AJSGame.Game.Title + " | " + AJSGame.Game.Version %>
+                    <br />
+                    <%= AJSGame.Game.Copyright %>
+                </small>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

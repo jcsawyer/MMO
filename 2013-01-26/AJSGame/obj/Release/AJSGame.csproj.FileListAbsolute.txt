@@ -1,0 +1,4 @@
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\bin\AJSGame.dll
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\bin\AJSGame.pdb
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\obj\Release\AJSGame.dll
+C:\Users\josep_000\documents\visual studio 2012\Projects\AJSGame\AJSGame\obj\Release\AJSGame.pdb
